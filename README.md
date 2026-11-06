@@ -52,7 +52,7 @@ No. Glance never writes a file. Claude Code already keeps your pasted images in 
 
 ### Does my image go anywhere?
 
-No. Glance works only on your computer. Nothing is uploaded.
+No. Glance works only on your computer. Nothing is uploaded. The full details are in the [privacy policy](PRIVACY.md).
 
 ## What glance runs and reads
 
