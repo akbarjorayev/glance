@@ -56,11 +56,28 @@ No. Glance works only on your computer. Nothing is uploaded. The full details ar
 
 ## What glance runs and reads
 
-So you know exactly what happens on your computer:
+So you know exactly what happens on your computer.
 
-- **Network:** none. Glance never connects to anything.
-- **What it reads:** the text in your prompt box, about five times a second, to spot `[Image #n]` placeholders; the images Claude Code keeps in its temp folder; and, for old chats, the images in the chat's history.
-- **Programs it starts:** Node.js, to run its own script that decodes and draws images. When you press **Open original**, your system's default app for the image (`rundll32` on Windows, `open` on macOS, `xdg-open` on Linux).
+### Inside Claude Code
+
+Glance is a Claude Code mod: a hooks module, [`hooks/register.tsx`](hooks/register.tsx). It hooks these events:
+
+- **Session start:** starts a check of your prompt box about five times a second, and rebuilds the previews of images already in the chat.
+- **Sending a prompt:** moves the previews from above the prompt to under your message. It reads the `[Image #n]` numbers in what you sent, and draws any image not shown yet from Claude Code's own copy.
+- **Drawing:** draws the preview tiles above the prompt and under your messages, and the full-size pane.
+
+What it reads:
+
+- The text in your prompt box, to spot `[Image #n]` placeholders.
+- The images you paste, from the folder where Claude Code keeps them on your computer.
+- For old chats, the images in the chat history.
+
+What it runs: one program, `node <plugin folder>/scripts/glance.mjs <command>`, where the command is `paint` (decode and draw images) or `open` (show one in your image viewer). The plugin folder is known only once glance is installed, so this command line is put together when it runs. The images, or where to find them, are passed to that script on standard input. The script runs on your computer and sends nothing anywhere. Glance reads no keys, tokens or other credentials, and it never runs a slash command.
+
+### Outside Claude Code
+
+- **Network:** none. Glance never connects to anything. See the [privacy policy](PRIVACY.md).
+- **Programs it starts:** besides its own script, only when you press **Open original**: your system's default app for the image (`rundll32` on Windows, `open` on macOS, `xdg-open` on Linux).
 - **Files it writes:** none.
 
 ## Known limits
