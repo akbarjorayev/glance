@@ -2,7 +2,7 @@
   "name": "glance",
   "displayName": "Glance",
   "version": "1.0.0",
-  "description": "See the images you paste into Claude Code as previews right in the terminal. Press one to view it full size.",
+  "description": "See the images you paste into Claude Code as previews right in the terminal, before and after you send them.",
   "author": {
     "name": "Akbar Jorayev",
     "url": "https://akbarjon.uz"
@@ -25,5 +25,9 @@
     "pasted images",
     "terminal graphics",
     "screenshots"
-  ]
+  ],
+  "icon": "./.claude-plugin/icon.png",
+  "documentationUrl": "https://github.com/akbarjorayev/glance#readme",
+  "supportUrl": "https://github.com/akbarjorayev/glance/issues",
+  "privacyPolicyUrl": "https://github.com/akbarjorayev/glance/blob/main/PRIVACY.md"
 }
