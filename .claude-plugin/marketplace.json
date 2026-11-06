@@ -1,0 +1,15 @@
+{
+  "name": "glance",
+  "owner": {
+    "name": "Akbar Jorayev",
+    "url": "https://akbarjon.uz"
+  },
+  "description": "Glance shows the images you paste into Claude Code as previews in the terminal.",
+  "plugins": [
+    {
+      "name": "glance",
+      "source": "./",
+      "description": "See the images you paste into Claude Code as previews right in the terminal. Press one to view it full size."
+    }
+  ]
+}
