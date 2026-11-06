@@ -1,0 +1,14 @@
+{
+  "name": "glance",
+  "version": "1.0.0",
+  "description": "See the images you paste into Claude Code as previews in the terminal.",
+  "type": "module",
+  "license": "MIT",
+  "scripts": {
+    "test": "node --test \"tests/*.test.mjs\""
+  },
+  "dependencies": {
+    "jpeg-js": "^0.4.4",
+    "pngjs": "^7.0.0"
+  }
+}

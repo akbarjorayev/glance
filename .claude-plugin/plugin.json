@@ -1,0 +1,29 @@
+{
+  "name": "glance",
+  "displayName": "Glance",
+  "version": "1.0.0",
+  "description": "See the images you paste into Claude Code as previews right in the terminal. Press one to view it full size.",
+  "author": {
+    "name": "Akbar Jorayev",
+    "url": "https://akbarjon.uz"
+  },
+  "homepage": "https://github.com/akbarjorayev/glance",
+  "repository": "https://github.com/akbarjorayev/glance",
+  "license": "MIT",
+  "types": "./types/index.d.ts",
+  "keywords": [
+    "image",
+    "preview",
+    "paste",
+    "screenshot",
+    "terminal",
+    "thumbnail",
+    "claude-code",
+    "claude-code-plugin",
+    "claude",
+    "image preview",
+    "pasted images",
+    "terminal graphics",
+    "screenshots"
+  ]
+}
